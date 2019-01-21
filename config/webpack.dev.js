@@ -40,11 +40,24 @@ module.exports = {
                         loader: 'extract-loader' // 2. lo tiene come file separato
                     },
                     {
-                        loader: 'html-loader' // 1. Linting html
+                        loader: 'html-loader', // 1. Linting html
+                        options: {
+                            attrs: ["img:src"]// controlla gli attributi 'src' delle tag <img>
+                        }
+                    }
+                ]
+            },
+            { // Regole per le immagini
+                test: /\.(jpg|png|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'images/[name].[ext]'
+                        }
                     }
                 ]
             }
-
         ]
     }
 }
