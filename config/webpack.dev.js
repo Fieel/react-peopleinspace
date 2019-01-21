@@ -12,5 +12,20 @@ module.exports = {
     },
     devServer: {
         contentBase: "dist" 
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: 'style-loader' // injecting css into html
+                    },
+                    {
+                        loader: 'css-loader'// linting css
+                    }
+                ]
+            }
+        ]
     }
 }
