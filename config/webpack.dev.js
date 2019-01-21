@@ -16,17 +16,35 @@ module.exports = {
     },
     module: {
         rules: [
-            {
+            { // Regole per i file css
                 test: /\.css$/,
                 use: [
                     {
-                        loader: 'style-loader' // injecting css into html
+                        loader: 'style-loader' // 2. injecting css into js
                     },
                     {
-                        loader: 'css-loader'// linting css
+                        loader: 'css-loader'// 1. linting css
+                    }
+                ]
+            },
+            { // Regole per i file html
+                test: /\.html$/,
+                use: [
+                    {
+                        loader: 'file-loader', // 3. setta il nome e crea il file
+                        options: {
+                            name: "[name].html"
+                        }
+                    },
+                    {
+                        loader: 'extract-loader' // 2. lo tiene come file separato
+                    },
+                    {
+                        loader: 'html-loader' // 1. Linting html
                     }
                 ]
             }
+
         ]
     }
 }
