@@ -11,7 +11,8 @@ module.exports = {
         publicPath: '/'// dove mettere i file output, partendo dalla path specifica sopra
     },
     devServer: {
-        contentBase: "dist" 
+        contentBase: "dist",
+        overlay: true
     },
     module: {
         rules: [
