@@ -1,2 +1,2 @@
 require('./main.css')
-alert('test');
+// alert('test');
