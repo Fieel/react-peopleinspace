@@ -3,12 +3,10 @@
       [
         "@babel/preset-env", // Uses plugins dynamically based on what's needed
         {
-          "targets": {
-            "browsers": [ "last 2 versions" ]
-          },
-          "debug": true
+          "debug": true,
+          "useBuiltIns": "usage" // Uses polyfills based on what's needed
         }
       ]
     ],
-    // "plugins": [ "@babel/transform-runtime" ]
+    "plugins": [ "@babel/plugin-transform-runtime" ]
   }
