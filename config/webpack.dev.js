@@ -11,11 +11,20 @@ module.exports = {
         publicPath: '/'// dove mettere i file output, partendo dalla path specifica sopra
     },
     devServer: {
-        contentBase: "dist",
-        overlay: true
+        contentBase: "dist",// Dove il server trova i file statici fa servire
+        overlay: true// Attiva overlay errori nel brower
     },
-    module: {
+    module: { // Tutte le funzionalità aggiuntive 
         rules: [
+            {
+                test: /\.js$/,
+                use: [
+                    {
+                        loader: 'babel-loader' // babel will handle js files, rules can be found in .babelrc
+                    }
+                ],
+                exclude: /node_modules/
+            },
             { // Regole per i file css
                 test: /\.css$/,
                 use: [
