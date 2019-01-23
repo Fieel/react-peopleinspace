@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "build": "webpack --config=config/webpack.dev.js",
-    "babel": "babel src/main.js"
+    "babel": "babel src/main.js",
+    "dev": " node src/server/main.js"
   },
   "keywords": [],
   "author": "Filipe Madureira",
@@ -17,7 +18,10 @@
   ],
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "@babel/runtime": "^7.3.1"
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.3.1",
+    "express": "^4.16.4",
+    "webpack-hot-middleware": "^2.24.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -32,6 +36,7 @@
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
+    "webpack-dev-middleware": "^3.5.1",
     "webpack-dev-server": "^3.1.14"
   }
 }

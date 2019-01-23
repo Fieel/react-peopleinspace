@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: { // File in entrata
@@ -12,7 +13,11 @@ module.exports = {
     },
     devServer: {
         contentBase: "dist",// Dove il server trova i file statici fa servire
-        overlay: true// Attiva overlay errori nel brower
+        overlay: true,// Attiva overlay errori nel brower
+        hot: true, // Attiva l'hot reloading con express
+        stats: {
+            colors: true
+        }
     },
     module: { // Tutte le funzionalità aggiuntive 
         rules: [
@@ -68,5 +73,8 @@ module.exports = {
                 ]
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }
