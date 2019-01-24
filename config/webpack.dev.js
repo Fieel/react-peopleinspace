@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: { // File in entrata
@@ -19,6 +20,7 @@ module.exports = {
             colors: true
         }
     },
+    devtool: "source-map",    
     module: { // Tutte le funzionalità aggiuntive 
         rules: [
             {
@@ -45,15 +47,6 @@ module.exports = {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: 'file-loader', // 3. setta il nome e crea il file
-                        options: {
-                            name: "[name].html"
-                        }
-                    },
-                    {
-                        loader: 'extract-loader' // 2. lo tiene come file separato
-                    },
-                    {
                         loader: 'html-loader', // 1. Linting html
                         options: {
                             attrs: ["img:src"]// controlla gli attributi 'src' delle tag <img>
@@ -75,6 +68,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new HTMLWebpackPlugin({
+            template: "./src/index.html"
+        })
     ]
 }
