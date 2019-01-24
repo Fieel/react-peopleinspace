@@ -1,21 +1,37 @@
 body{
     margin: 0;
     background-color: gray;
-}
-h1 {
-    color: white;
-    font-size: 5em;
     font-family: sans-serif;
-    text-shadow: 0 0 10px black;
 }
-img {
-    border-radius: 100%;
-    width: 300px;
+a {
+    color: white;
+    text-decoration: none;
 }
-.profile{
+
+.main-wrapper{
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-flow: column;
+}
+
+h1 {
+    color: white;;
+    font-size: 10em;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+}
+
+.astronaut-list{
+    color: white;
+    font-size: 2em;
+    background-color: rgba(68, 84, 173, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+.astronaut-list-item{
+    text-align: left;
+    text-shadow: 0 0 10px black;
 }
