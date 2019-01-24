@@ -6,11 +6,27 @@ I made this project to learn to use webpack and react from scratch.
 2. Hook react.js to webpack
 3. Learn react.js
 
-# tool stack
+## tool stack
 
-Webpack.js bundler: https://webpack.js.org/
-    * src/config/webpack.dev.js
-Babel.js compiler: https://babeljs.io/
-    * .babelrc
-Express.js server: https://expressjs.com/
-    * src/server/express.js
+Tools used and configuration files:
+
+### Webpack.js bundler
+https://webpack.js.org/
+
+_config file_: src/config/webpack.dev.js
+
+
+### Babel.js compiler
+https://babeljs.io/
+
+_config file_: .babelrc
+
+
+### Express.js dev server
+https://expressjs.com/
+
+_config file_: src/server/express.js
+
+
+### React.js
+https://reactjs.org/
