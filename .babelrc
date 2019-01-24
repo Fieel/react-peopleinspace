@@ -3,10 +3,11 @@
       [
         "@babel/preset-env", // Uses plugins dynamically based on what's needed
         {
-          "debug": true,
+          "debug": false,
           "useBuiltIns": "usage" // Uses polyfills based on what's needed
         }
-      ]
+      ],
+      "@babel/preset-react"
     ],
     "plugins": [ "@babel/plugin-transform-runtime" ]
   }
