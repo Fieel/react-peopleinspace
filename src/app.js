@@ -1,30 +1,52 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Root from  './root';
+import React, { Component } from 'react';
+import Counter from './components/Counter';
+import List from './components/List';
 
-// Adds the .hot property to this js module
-import { AppContainer } from 'react-hot-loader';
+class App extends Component {
 
-// Function that can be used to rended any component and still use the hot loader
-function render(Component){
-    ReactDOM.render(
-        <AppContainer>
-            <Component />
-        </AppContainer>,
-        document.getElementById('react-root')
-    )
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: false,
+      error: false,
+      numerOfPeopleInSpace: null,
+      listOfPeopleInSpace: []
+    }
+  }
+
+  // React hook, fetching the API here
+  componentDidMount() {
+    this.setState({
+      isLoading: true
+    });
+
+    fetch("http://api.open-notify.org/astros.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            isLoading: false,
+            numerOfPeopleInSpace: result.number,
+            listOfPeopleInSpace: result.people
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoading: false,
+            error: true
+          });
+        }
+      )
+  }
+
+  render() {
+    return (
+      <div>
+        <Counter number={this.state.numerOfPeopleInSpace} />
+        <List people={this.state.listOfPeopleInSpace} />
+      </div>
+    );
+  }
 }
 
-// Actually render stuff here
-render(Root);
-// render(List, 'list-component');
-
-// Checks if the module is hot, in case it is it reloads the page
-// without losing all the data saved in the state. The module becomes hot
-// whenever an assets gets edited and recompilation is necessary for hot reloading.
-if(module.hot){
-    module.hot.accept('./root.js', () => {
-        const NewRoot = require('./root.js').default;
-        render(NewRoot);
-    })
-}
+export default App;
