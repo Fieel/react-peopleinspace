@@ -7,32 +7,16 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
-    <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <meta name="theme-color" content="#021631" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>How many people are in space right now?</title>
+    <meta name="description" content="This website shows how many people are in space right now.">
+    <meta name="author" content="Filipe Madureira">
   </head>
   <body>
-    <noscript>Sorry friend, you need to enable JavaScript to run this app./</noscript>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <body>
-      <!-- Background iFrame with ISS livestream -->
-      <div id='video' style="position: fixed; z-index: -99; width: 100%; height: 100%">
-          <iframe width="100%" height="100%" src="https://www.ustream.tv/embed/17074538?html5ui?autoplay=1&vq=hd720&showinfo=0&controls=0&iv_load_policy=3?modestbranding=1&autohide=1&rel=0"
-              allow='autoplay' scrolling="no" allowfullscreen webkitallowfullscreen frameborder="0"></iframe>
-      </div>
-      <!-- React root node -->
       <div id="react-root" class="main-wrapper"></div>
   </body>
 </html>
