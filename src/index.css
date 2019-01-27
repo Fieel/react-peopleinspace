@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    /* min-width: 400px; */
+  }
+  
+  canvas {
+    z-index: -1;
+  }
+  
+  @font-face {
+    font-family: 'Lato-Regular';
+    src:
+        url('./fonts/Lato-Regular.ttf');
+    }
+  h1 {
+    color: white;
+    font-size: 20em;
+    font-family: Lato-Regular;
+    text-shadow: 0 0 10px black;
+    text-align: center;
+    margin: 20px 0 0 0;
+    user-select: none;
+    line-height: 280px;
+  }
+  
+  .subtitle {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    color: white;
+    font-style: italic;
+    font-size: 8px;
+    font-family: sans-serif;
+    text-shadow: 0 0 10px black;
+  }
+  
+  .astronaut-list{
+    color: white;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .astronaut-list-item{
+    text-align: center;
+    text-shadow: 0 0 10px black;
+    user-select: none;
+  }
+  
+  
+  
+  
+  body {
+    background-color: #010b19;
+    animation-name: color;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes color {
+    0% {
+      background-color: #021631;
+    }
+    50% {
+      background-color: #010b19;
+    }
+    100% {
+      background-color: #021631;
+    }
+  }
