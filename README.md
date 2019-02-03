@@ -1,3 +1,19 @@
+# react-peopleinspace
+
+This is a minimalist single page web application written using Rect.js.
+
+Using a unique and interesting API from [Open Notify](http://open-notify.org/Open-Notify-API/People-In-Space/) to fetch data.
+
+<img align="center" src="docs/Devices-mockups-screenshot.PNG">
+
+## Demo
+
+Heroku: https://react-peopleinspace.herokuapp.com
+
+Private web server: http://peopleinspace.fieel.space/
+
+# React generated docs:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
