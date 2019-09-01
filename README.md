@@ -11,7 +11,7 @@ Using a unique and interesting API from [Open Notify](http://open-notify.org/Ope
 
 Heroku: http://react-peopleinspace.herokuapp.com
 
-Private web server: http://peopleinspace.fieel.space/
+Private web server: http://peopleinspace.fieel.space/ (you'll have to bypass the "not secure" message, unfortunatelly this API is not secured behind HTTPS but my domain is, unlike heroku)
 
 ## Deployment
 
