@@ -9,7 +9,7 @@ Using a unique and interesting API from [Open Notify](http://open-notify.org/Ope
 
 ## Demo
 
-Heroku: https://react-peopleinspace.herokuapp.com
+Heroku: http://react-peopleinspace.herokuapp.com
 
 Private web server: http://peopleinspace.fieel.space/
 
